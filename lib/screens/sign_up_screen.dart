@@ -1,19 +1,29 @@
 import 'package:flutter/material.dart';
-import 'sign_up_screen.dart';
+import 'package:nimbus/screens/sign_in_screen.dart';
 
-class SignInScreen extends StatefulWidget {
+class SignUpScreen extends StatefulWidget {
   @override
-  _SignInScreenState createState() => _SignInScreenState();
+  _SignUpScreenState createState() => _SignUpScreenState();
 }
 
-class _SignInScreenState extends State<SignInScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   // toggle visibility
   bool _toggleVisibility = true;
+  bool _toggleConfirmVisibility = true;
   // email field
   Widget _buildEmailTextField() {
     return TextFormField(
       decoration: InputDecoration(
-        hintText: "Email/Username",
+        hintText: "Email",
+        hintStyle: TextStyle(color: Color(0xffbdc2cb), fontSize: 18.0),
+      ),
+    );
+  }
+  // username
+  Widget _buildUsernameTextField() {
+    return TextFormField(
+      decoration: InputDecoration(
+        hintText: "Username",
         hintStyle: TextStyle(color: Color(0xffbdc2cb), fontSize: 18.0),
       ),
     );
@@ -34,48 +44,61 @@ class _SignInScreenState extends State<SignInScreen> {
           },
           icon: _toggleVisibility
               ? Icon(
-                  Icons.visibility_off,
-                  color: Colors.green,
-                )
+            Icons.visibility_off,
+            color: Colors.green,
+          )
               : Icon(
-                  Icons.visibility,
-                  color: Colors.green,
-                ),
+            Icons.visibility,
+            color: Colors.green,
+          ),
         ),
       ),
       obscureText: _toggleVisibility,
     );
   }
 
+  Widget _buildConfirmPasswordTextField() {
+    return TextFormField(
+      decoration: InputDecoration(
+        hintText: "Confirm Password",
+        hintStyle: TextStyle(color: Color(0xffbdc2cb), fontSize: 18.0),
+        suffixIcon: IconButton(
+          onPressed: () {
+            // change visibility
+            setState(() {
+              _toggleConfirmVisibility = !_toggleConfirmVisibility;
+            });
+          },
+          icon: _toggleConfirmVisibility
+              ? Icon(
+            Icons.visibility_off,
+            color: Colors.green,
+          )
+              : Icon(
+            Icons.visibility,
+            color: Colors.green,
+          ),
+        ),
+      ),
+      obscureText: _toggleConfirmVisibility,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 10.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              "Sign In",
+              "Register Here",
               style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold),
             ),
             SizedBox(
-              height: 100.0,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                Text(
-                  "Forgot Password?",
-                  style: TextStyle(
-                      fontSize: 18.0,
-                      color: Colors.green,
-                      fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 15.0,
+              height: 50.0,
             ),
             Card(
               elevation: 5.0,
@@ -87,7 +110,15 @@ class _SignInScreenState extends State<SignInScreen> {
                     SizedBox(
                       height: 20.0,
                     ),
+                    _buildUsernameTextField(),
+                    SizedBox(
+                      height: 20.0,
+                    ),
                     _buildPasswordTextField(),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    _buildConfirmPasswordTextField(),
                   ],
                 ),
               ),
@@ -103,7 +134,7 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
               child: Center(
                 child: Text(
-                  'Sign In',
+                  'Register',
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 20.0,
@@ -118,20 +149,20 @@ class _SignInScreenState extends State<SignInScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
-                  "Don't Have an account?",
+                  "Already have an account?",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0),
                 ),
                 SizedBox(
                   width: 10.0,
                 ),
                 GestureDetector(
-                  onTap: () {
-                    // navigate to the sign up page
+                  onTap: (){
+                    // navigate to the sign in page
                     Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        builder: (BuildContext context) => SignUpScreen()));
+                        builder: (BuildContext context) => SignInScreen()));
                   },
                   child: Text(
-                    "SIGN UP",
+                    "Sign In",
                     style: TextStyle(
                         color: Colors.green,
                         fontWeight: FontWeight.bold,
