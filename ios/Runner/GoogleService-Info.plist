@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>62659487415-rdtp9a0fs2uhse9flsicg766hg1ajkgf.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.62659487415-rdtp9a0fs2uhse9flsicg766hg1ajkgf</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAuJ3cr_8DIRh3JgYLlmOPohFCWogQ4Wn8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>62659487415</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.fanonx.nimbus</string>
+	<key>PROJECT_ID</key>
+	<string>nimbus-7bed6</string>
+	<key>STORAGE_BUCKET</key>
+	<string>nimbus-7bed6.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:62659487415:ios:d5ff3f5b22bb2e73</string>
+	<key>DATABASE_URL</key>
+	<string>https://nimbus-7bed6.firebaseio.com</string>
+</dict>
+</plist>

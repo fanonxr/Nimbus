@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "62659487415",
+    "firebase_url": "https://nimbus-7bed6.firebaseio.com",
+    "project_id": "nimbus-7bed6",
+    "storage_bucket": "nimbus-7bed6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:62659487415:android:d5ff3f5b22bb2e73",
+        "android_client_info": {
+          "package_name": "com.fanonx.nimbus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "62659487415-7aig8eonogp4i77e1dg35rf2fk5dm7dk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFQrS4cK51tmxaBKjt0uV8VTjb9tIhcjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "62659487415-7aig8eonogp4i77e1dg35rf2fk5dm7dk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
